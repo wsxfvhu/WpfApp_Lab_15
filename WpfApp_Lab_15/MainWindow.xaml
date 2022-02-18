@@ -1,0 +1,110 @@
+﻿<Window x:Class="WpfApp_Lab_15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_Lab_15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="619">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer x:Name="doc">
+            <FlowDocument>
+                <Paragraph TextAlignment="Center" FontSize="20">
+                    <Bold>
+                        <Hyperlink NavigateUri="https://www.purina.ru/cats/cat-breeds/library/maine_coon">Басня</Hyperlink>
+                    </Bold>
+                    <Floater Width="250">
+                        <BlockUIContainer>
+                            <Image Source="data/1.jpeg"/>
+                        </BlockUIContainer>
+                    </Floater>
+                </Paragraph>
+                <Paragraph>
+                    Вася и Петя одновременно начали писать один и тот же продукт.
+                    Вася был «ориентирован на результат» и начал сразу писать говнокод не продумав толком архитектуру.
+                    А Петя месяц разрабатывал архитектуру, месяц делал удобный интуитивный интерфейс, которому позавидывал бы Джони Айв, потом месяц писал тесты, потом два месяца писал сам код и получил идеальное стабильное приложение.
+                    Но Вася выпустил уже через месяц первую версию программы, пусть и не идеальную, пусть с багами, но рабочую, и начал её продавать. Ещё через месяц выпустил вторую версию исправляющие баги первой и добавляющие новые баги. Ещё через месяц на доходы от продаж нанял двух толковых программеров, которые за два месяца перелопатили весь код, согласно пожеланиям пользователей допилили интерфейс и выпустили третью версию программы.
+                </Paragraph>
+                <Paragraph FontSize="22" TextAlignment="Center" Background="Azure">
+                    <Run Foreground="Red">Итого, через пять месяцев</Run>
+                </Paragraph>
+                <Table>
+                    <Table.Columns>
+                        <TableColumn Width="200"/>
+                        <TableColumn Width="Auto"/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell  Background="Yellow">
+                                <Paragraph TextAlignment="Left">
+                                    <Bold>У Васи</Bold>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Background="#FF1D7BBA">
+                                <Paragraph>
+                                    Два работника, куча клиентов и сносно работающее приложение отвечающее желаниям клиентов.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell  Background="Yellow">
+                                <Paragraph TextAlignment="Left">
+                                    <Bold>У Пети</Bold>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Background="#FF1D7BBA">
+                                <Paragraph>
+                                   Вылизанное никому не известное приложение, минус на банковском счёте и ни одного клиента.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+
+                <List MarkerStyle="Disc">
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Через полгода Вася.</Bold>
+                            Купил за долги все наработки Пети.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Петя.</Bold>
+                            Пошел работать инженером по тестированию к Васе.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Вася.</Bold>
+                            Продал компанию крупной корпорации. Напился и разбился на своём новеньком Volkswagen Touareg
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Петя.</Bold>
+                            Заработал немного денег и опять увлекся новым стартапом.
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph>
+                    <Floater Width="400" HorizontalAlignment="Center">
+                        <BlockUIContainer>
+                            <Image Source="data/2.jpg"/>
+                        </BlockUIContainer>
+                    </Floater>
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <StackPanel HorizontalAlignment="Center" Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Сохранить" Width="100" Click="Button_Click_2"/>
+            <Button Content="Открыть" Width="100" Click="Button_Click_1"/>
+            <Button Content="Очистить" Width="100" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+
+</Window>
